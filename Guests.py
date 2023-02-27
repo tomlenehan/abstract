@@ -1,4 +1,4 @@
-from SeatingChart3 import create_seating_chart
+from SeatingChart import create_seating_chart
 
 num_tables = 4
 guest_list = ["Alice", "Bob", "Charlie", "David", "Emily", "Frank", "Grace", "Henry", "Isabella", "Jack", "Kate", "Liam", "Mia", "Noah", "Olivia", "Peter", "Quinn", "Rose", "Sarah", "Tom"]
