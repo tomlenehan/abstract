@@ -24,9 +24,7 @@ planner_preferences = [
     {"preference": "pair", "guests": ["Rose", "Sarah"]},
     {"preference": "pair", "guests": ["Tom", "Alice"]}
 ]
-
 seating_chart = create_seating_chart(num_tables, guest_list, planner_preferences)
-print(seating_chart)
 
 
 num_tables = 5
@@ -58,13 +56,11 @@ planner_preferences = [
     {"preference": "pair", "guests": ["Sarah", "Tom"]}
 ]
 result = create_seating_chart(num_tables, guest_list, planner_preferences)
-print(result)
 
 # Test case 2
 num_tables = 4
 guest_list = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry", "Isabelle", "John", "Katie", "Liam", "Mary", "Nancy", "Olivia", "Peter", "Quinn", "Rachel", "Sarah", "Tom"]
 result = create_seating_chart(num_tables, guest_list)
-print(result)
 
 # Test case 3
 num_tables = 6
@@ -79,4 +75,3 @@ planner_preferences = [
     {"preference": "pair", "guests": ["Sarah", "Tom"]}
 ]
 result = create_seating_chart(num_tables, guest_list, planner_preferences)
-print(result)
