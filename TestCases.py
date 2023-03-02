@@ -1,5 +1,6 @@
 from SeatingChart import create_seating_chart
 
+test_name = "test_case_1"
 num_tables = 4
 guest_list = ["Alice", "Bob", "Charlie", "David", "Emily", "Frank", "Grace", "Henry", "Isabella", "Jack", "Kate", "Liam", "Mia", "Noah", "Olivia", "Peter", "Quinn", "Rose", "Sarah", "Tom"]
 planner_preferences = [
@@ -24,9 +25,9 @@ planner_preferences = [
     {"preference": "pair", "guests": ["Rose", "Sarah"]},
     {"preference": "pair", "guests": ["Tom", "Alice"]}
 ]
-seating_chart = create_seating_chart(num_tables, guest_list, planner_preferences)
+seating_chart = create_seating_chart(num_tables, guest_list, planner_preferences, test_name)
 
-
+test_name = "test_case_2"
 num_tables = 5
 guest_list = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry", "Isabelle", "John", "Katie", "Liam", "Mary", "Nancy", "Olivia", "Peter", "Quinn", "Rachel", "Sarah", "Tom"]
 planner_preferences = [
@@ -38,12 +39,10 @@ planner_preferences = [
     {"preference": "pair", "guests": ["Quinn", "Rachel"]},
     {"preference": "pair", "guests": ["Sarah", "Tom"]}
 ]
-result = create_seating_chart(num_tables, guest_list, planner_preferences)
-print(result)
+result = create_seating_chart(num_tables, guest_list, planner_preferences, test_name)
 
 
-
-# Test case 1
+test_name = "test_case_3"
 num_tables = 2
 guest_list = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry", "Isabelle", "John", "Katie", "Liam", "Mary", "Nancy", "Olivia", "Peter", "Quinn", "Rachel", "Sarah", "Tom"]
 planner_preferences = [
@@ -55,14 +54,16 @@ planner_preferences = [
     {"preference": "pair", "guests": ["Quinn", "Rachel"]},
     {"preference": "pair", "guests": ["Sarah", "Tom"]}
 ]
-result = create_seating_chart(num_tables, guest_list, planner_preferences)
+result = create_seating_chart(num_tables, guest_list, planner_preferences, test_name)
 
-# Test case 2
+
+test_name = "test_case_4"
 num_tables = 4
 guest_list = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry", "Isabelle", "John", "Katie", "Liam", "Mary", "Nancy", "Olivia", "Peter", "Quinn", "Rachel", "Sarah", "Tom"]
-result = create_seating_chart(num_tables, guest_list)
+result = create_seating_chart(num_tables, guest_list, [], test_name)
 
-# Test case 3
+
+test_name = "test_case_5"
 num_tables = 6
 guest_list = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry", "Isabelle", "John", "Katie", "Liam", "Mary", "Nancy", "Olivia", "Peter", "Quinn", "Rachel", "Sarah", "Tom"]
 planner_preferences = [
@@ -74,4 +75,4 @@ planner_preferences = [
     {"preference": "pair", "guests": ["Quinn", "Rachel"]},
     {"preference": "pair", "guests": ["Sarah", "Tom"]}
 ]
-result = create_seating_chart(num_tables, guest_list, planner_preferences)
+result = create_seating_chart(num_tables, guest_list, planner_preferences, test_name)

@@ -1,8 +1,17 @@
+# Author: Tom Lenehan
 import json
 import random
 
 
-def create_seating_chart(num_tables, guest_list, planner_preferences=None):
+# given the number of tables, the list of guests, and the planner's preferences, return a seating chart
+# num_tables is an integer
+# guest_list is a list of strings
+# planner_preferences is a list of dictionaries, each dictionary has the following keys:
+# "preference": "avoid" or "pair"
+# "guests": a list of two guests
+#
+# the output seating_chart is a dictionary, where the keys are the table numbers and the values are lists of guests
+def create_seating_chart(num_tables, guest_list, planner_preferences=None, test_name='test_case'):
     tables = {}
     for i in range(1, num_tables + 1):
         tables[f"table_{i}"] = []
@@ -18,7 +27,6 @@ def create_seating_chart(num_tables, guest_list, planner_preferences=None):
                 guest_preferences[guest2] = {"avoid": [], "pair": []}
             if pref["preference"] == "avoid":
                 guest_preferences[guest1]["avoid"].append(guest2)
-                guest_preferences[guest2]["avoid"].append(guest1)
             elif pref["preference"] == "pair":
                 guest_preferences[guest1]["pair"].append(guest2)
 
@@ -45,5 +53,5 @@ def create_seating_chart(num_tables, guest_list, planner_preferences=None):
                     seated = True
 
     # Write tables to a JSON file
-    with open('seating_chart.json', 'w') as f:
+    with open(test_name, 'w') as f:
         json.dump(tables, f)
