@@ -53,5 +53,5 @@ def create_seating_chart(num_tables, guest_list, planner_preferences=None, test_
                     seated = True
 
     # Write tables to a JSON file
-    with open(test_name, 'w') as f:
+    with open(test_name+'.json', 'w') as f:
         json.dump(tables, f)

@@ -1,13 +1,22 @@
-Legislator Gala Coding Challenge
-This coding challenge consists of two files: SeatingChart.py and TestCases.py.
-The goal of this challenge is to create a seating chart for a given number of tables, guest list, and planner preferences.
+# Legislator Gala Coding Challenge
 
-SeatingChart.py
-Description
-The SeatingChart.py script contains a function named create_seating_chart which takes three required arguments and one optional argument:
+## Overview
 
-num_tables: an integer representing the number of tables.
-guest_list: a list of strings representing the list of guests.
-planner_preferences: an optional list of dictionaries representing the planner's preferences.
-test_name: an optional string representing the name of the output file.
-The create_seating_chart function returns a JSON file with a seating chart dictionary where the keys are the table numbers and the values are lists of guests.
+This coding challenge consists of two files: SeatingChart.py and TestCases.py. The goal of this challenge is to create a seating chart for a given number of tables, guest list, and planner preferences.
+
+## SeatingChart.py
+
+### Description
+
+The SeatingChart.py script contains a function named `create_seating_chart` which takes three required arguments and one optional argument:
+
+- `num_tables`: an integer representing the number of tables.
+- `guest_list`: a list of strings representing the list of guests.
+- `planner_preferences`: an optional list of dictionaries representing the planner's preferences.
+- `test_name`: an optional string representing the name of the output file.
+
+The `create_seating_chart` function returns a JSON file with a seating chart dictionary where the keys are the table numbers and the values are lists of guests.
+
+## TestCases.py
+
+Run `TestCases.py` to generate a seating chart for each test case.
